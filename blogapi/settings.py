@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # initialized apps:
     'blog',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -114,3 +115,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Extra Configs
+AUTH_USER_MODEL = 'accounts.CustomUser'

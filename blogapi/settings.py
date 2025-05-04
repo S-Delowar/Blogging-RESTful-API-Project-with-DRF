@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # third-party apps:
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_spectacular',
     # initialized apps:
     'blog',
     'accounts',
@@ -131,6 +132,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 5,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema', 
 }
 
 from datetime import timedelta
@@ -139,4 +141,11 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Blog API Platform',
+    'DESCRIPTION': "A RESTful Blog API built with Django Rest Framework and JWT authentication. It supports user registration, login, and CRUD operations on blog posts. Only authenticated users can manage their own posts. API documentation is provided via Swagger and Redoc using drf-spectacular.",
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }

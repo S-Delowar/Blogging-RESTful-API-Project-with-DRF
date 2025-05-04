@@ -20,6 +20,7 @@ def redirect_to_docs(request):
 
 urlpatterns = [
     path('', redirect_to_docs),
+    path('api/', redirect_to_docs),
     path('admin/', admin.site.urls),
     path('api/', include('accounts.urls')),
     path('api/', include('blog.urls')),

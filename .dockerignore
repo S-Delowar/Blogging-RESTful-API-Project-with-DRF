@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.sqlite3
+
+# Django static + media (generated during build/runtime)
+staticfiles/
+media/
+
+# Virtual environments
+venv/
+.env/
+.env.local
+
+.vscode/
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml

@@ -7,7 +7,7 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ("title", 
                     "author", 
                     "created_at", 
-                    "updated_at",
+                    "image",
                     )
 
 admin.site.register(Post, PostAdmin)

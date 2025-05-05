@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    command: >
+      bash -c "
+        python manage.py migrate --noinput &&
+        python manage.py collectstatic --noinput &&
+        gunicorn blogapi.wsgi:application --bind 0.0.0.0:8000 --timeout 120
+      "
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  
+    volumes:
+      - .:/app
+    

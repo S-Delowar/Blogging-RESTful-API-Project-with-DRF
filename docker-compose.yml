@@ -2,7 +2,8 @@ version: "3.8"
 
 services:
   web:
-    build: .
+    image: sdelowar2/blog-api-drf:latest
+    # build: .
     command: >
       bash -c "
         python manage.py migrate --noinput &&

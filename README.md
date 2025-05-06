@@ -98,8 +98,8 @@ Run migrations -
 ## API Documentation
 Documenting the APIs with `drf-spectacular`.
 Available at:
--  Swagger-UI: [`/api/docs/`](https://blogging-restful-api-project-with-drf.onrender.com/api/docs/)
--  Redoc-UI [`/api/redoc/`](https://blogging-restful-api-project-with-drf.onrender.com/api/redoc/)
+-  **Swagger-UI**: https://blogging-restful-api-project-with-drf.onrender.com/api/docs/
+-  **Redoc-UI**: https://blogging-restful-api-project-with-drf.onrender.com/api/redoc/
 
 ## Static & Media Files with AWS S3
 - Uploaded blog post images are stored in an S3 bucket.

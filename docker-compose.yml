@@ -2,8 +2,11 @@ version: "3.8"
 
 services:
   web:
+    container_name: blog-api-web
     image: sdelowar2/blog-api-drf:latest
-    # build: .
+    build: .
+    depends_on:
+      - db
     command: >
       bash -c "
         python manage.py migrate --noinput &&
@@ -14,6 +17,25 @@ services:
       - "8000:8000"
     env_file:
       - .env  
+    # volumes:
+    #   - .:/app
+
+  
+  db:
+    container_name: blog-api-db
+    image: postgres:16
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     volumes:
-      - .:/app
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:
+  
+
     

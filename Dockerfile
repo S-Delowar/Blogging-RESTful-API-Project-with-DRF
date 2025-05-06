@@ -25,8 +25,5 @@ COPY . .
 # Exposing the port
 EXPOSE 8000
 
-# Collect static files
-RUN python manage.py collectstatic --noinput
-
 # Running the application using Gunicorn
 CMD ["gunicorn", "blogapi.wsgi:application", "--bind", "0.0.0.0:8000", "--timeout", "120"]

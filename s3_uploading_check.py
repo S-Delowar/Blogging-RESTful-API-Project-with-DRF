@@ -13,4 +13,4 @@ session = boto3.Session(
 s3 = session.client('s3')
 print(os.getenv("AWS_ACCESS_KEY_ID"))
 # Test upload
-s3.put_object(Bucket='blogapi-pyronlab', Key='testfile.txt', Body='Hello World')
+s3.put_object(Bucket='blog-api-pyronlab', Key='testfile.txt', Body='Hello World! Checking s3 uploading')

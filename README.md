@@ -20,7 +20,7 @@ Admin Login **Email**: `admin.blogapi@mail.com`, **Password**: `adminpass123`
 - API documentation with Swagger & ReDoc (`drf-spectacular`)
 - Media file uploads to AWS S3
 - Dockerized app with PostgreSQL
-- Deployment on AWS EC2
+- Deployment on AWS EC2 and Render
 - Environment variable support via `.env`
 
 ---

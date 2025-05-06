@@ -3,7 +3,9 @@
 A full-featured blog API built with Django REST Framework, JWT authentication, PostgreSQL, Docker, and deployed on AWS EC2. The project supports user registration/login, CRUD operations for blog posts with media uploads, permission controls, and more.
 
 **Live Link:** https://blogging-restful-api-project-with-drf.onrender.com/
+
 **Admin Login:** https://blogging-restful-api-project-with-drf.onrender.com/admin/
+
 Admin Login **Email**: `admin.blogapi@mail.com`, **Password**: `adminpass123`
 
 ---
@@ -161,13 +163,16 @@ All sensitive values are managed through `.env` for:
 ##### Test with Postman
 All API endpoints were tested using **Postman** against the deployed EC2 URL. All features and permissions worked as expected.
 
-As AWS charges dollar, thats why I have terminated EC2 instance after testing everthing.   Later for free deployment I'have chosen [Render](https://render.com/) platform.
+As AWS charges dollar, thats why I have **terminated EC2 instance** after testing everthing.   Later for free deployment I'have chosen [**Render**](https://render.com/) platform.
 
 ## Deploy on Render
 1. As Render does not works with docker-compose.yml, rather than it takes Dockerfile from GitHub Repository.
 2. Used [Supabase](https://supabase.com/)'s free `PostgreSQL` service
 3. Set the environment variable correctly on Render.
+4. Deployed and tested all the API endpoints (Testing Successful)
 
 **Live Link:** https://blogging-restful-api-project-with-drf.onrender.com/
+
 **Admin Login:** https://blogging-restful-api-project-with-drf.onrender.com/admin/
+
 Admin Login **Email**: `admin.blogapi@mail.com`, **Password**: `adminpass123`

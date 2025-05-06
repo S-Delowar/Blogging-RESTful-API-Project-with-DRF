@@ -22,8 +22,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copying project files
 COPY . .
 
+# Make start.sh executable
+RUN chmod +x /app/start.sh
+
 # Exposing the port
 EXPOSE 8000
 
-# Running the application using Gunicorn
-CMD ["gunicorn", "blogapi.wsgi:application", "--bind", "0.0.0.0:8000", "--timeout", "120"]
+# Run the app with start.sh - migration, create superuser, collectstatic and gunicorn
+CMD ["/app/start.sh"]

@@ -94,8 +94,8 @@ Run migrations -
 ## API Documentation
 Documenting the APIs with `drf-spectacular`.
 Available at:
-- [`/api/docs/`](https://blogging-restful-api-project-with-drf.onrender.com/api/docs/)
-- [`/api/redoc/`](https://blogging-restful-api-project-with-drf.onrender.com/api/redoc/)
+-  Swagger-UI: [`/api/docs/`](https://blogging-restful-api-project-with-drf.onrender.com/api/docs/)
+-  Redoc-UI [`/api/redoc/`](https://blogging-restful-api-project-with-drf.onrender.com/api/redoc/)
 
 ## Static & Media Files with AWS S3
 - Uploaded blog post images are stored in an S3 bucket.
@@ -112,6 +112,8 @@ All sensitive values are managed through `.env` for:
 
 ## Dockerization
 #### Docker & Compose Setup
+- created `start.sh` for entrypoint commands for `migrate`, `createsuperuser`, `collectstatic` and starting `gunicorn`
+- created Dockerfile
 - Dockerfile built and pushed to DockerHub
   - `docker build -t blogapi .`
   - `docker tag blogapi sdelowar2/blogapi:latest`

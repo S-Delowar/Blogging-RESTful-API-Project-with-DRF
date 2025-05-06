@@ -94,8 +94,8 @@ Run migrations -
 ## API Documentation
 Documenting the APIs with `drf-spectacular`.
 Available at:
-- [`/api/docs/`](http://ec2-15-207-248-12.ap-south-1.compute.amazonaws.com:8000/api/docs/)
-- [`/api/redoc/`](http://ec2-15-207-248-12.ap-south-1.compute.amazonaws.com:8000/api/redoc/)
+- [`/api/docs/`](https://blogging-restful-api-project-with-drf.onrender.com/api/docs/)
+- [`/api/redoc/`](https://blogging-restful-api-project-with-drf.onrender.com/api/redoc/)
 
 ## Static & Media Files with AWS S3
 - Uploaded blog post images are stored in an S3 bucket.
